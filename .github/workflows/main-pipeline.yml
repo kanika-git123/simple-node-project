@@ -37,13 +37,6 @@ jobs:
       - name: Run unit tests
         run: npm test
 
-      - name: Upload test artifacts
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-results-node-${{ matrix.node-version }}
-          path: .
-
   build-and-push-image:
     name: Build and Push Docker Image
     needs: lint_and_unit_tests
