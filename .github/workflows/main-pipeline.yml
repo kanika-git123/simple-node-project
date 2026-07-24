@@ -55,3 +55,17 @@ jobs:
       push: true
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-to-production:
+    name: Deploy to Production
+    needs: build-and-push-image
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: Production
+      url: https://github.com/${{ github.repository }}
+    steps:
+      - name: Deploy application
+        run: |
+          echo "Deployment approved and running."
+          echo "Image is available in ghcr.io/${{ github.repository }}"
