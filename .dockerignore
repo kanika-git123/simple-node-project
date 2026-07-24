@@ -1,0 +1,13 @@
+node_modules
+npm - debug.log
+    .git
+    .gitignore
+    .github
+README.md
+    .eslintrc.json
+eslint.config.js
+    .vscode
+test
+    *.md
+        .env
+        .env.local
