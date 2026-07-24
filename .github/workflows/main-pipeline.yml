@@ -7,9 +7,6 @@ on:
   pull_request:
     branches:
       - main
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
 
 permissions:
   contents: read
@@ -54,7 +51,7 @@ jobs:
     uses: ./.github/workflows/dockerbuild-template.yml
     with:
       image_name: ${{ github.repository }}
-      registry: ${{ env.REGISTRY }}
+      registry: ghcr.io
       push: true
     secrets:
       github_token: ${{ secrets.GITHUB_TOKEN }}
