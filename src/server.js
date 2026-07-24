@@ -1,6 +1,7 @@
 const http = require('http');
 
 function startServer() {
+    // Get the port from the environment variable or use the default value of 3000
     const configuredPort = process.env.PORT;
     const port = configuredPort === undefined ? 3000 : Number(configuredPort);
     const host = process.env.HOST || '127.0.0.1';
