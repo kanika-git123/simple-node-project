@@ -8,10 +8,15 @@
     "scripts": {
         "start": "node index.js",
         "dev": "node index.js",
-        "test": "node --test"
+        "test": "node --test",
+        "lint": "eslint ."
     },
     "engines": {
         "node": ">=18"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "eslint": "^10.7.0"
+    }
 }
