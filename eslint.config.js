@@ -16,7 +16,7 @@ module.exports = [
         rules: {
             ...js.configs.recommended.rules,
             'indent': ['error', 4],
-            'linebreak-style': ['error', 'unix'],
+            'linebreak-style': 'off',
             'quotes': ['error', 'single'],
             'semi': ['error', 'always']
         }
